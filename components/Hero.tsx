@@ -17,7 +17,7 @@ const Hero: React.FC = () => {
 
           <div className="absolute inset-0 flex flex-col justify-center items-center text-center p-6 md:p-12 z-10">
             <div className="bg-white/30 backdrop-blur-md rounded-3xl p-8 md:p-12 border border-white/40 shadow-2xl max-w-4xl mx-auto">
-              <h1 className="display-font text-[5rem] md:text-[9rem] font-bold text-slate-900 uppercase tracking-tighter leading-[0.85] drop-shadow-sm opacity-90 mb-4">
+              <h1 className="display-font text-[13vw] md:text-[9rem] font-bold text-slate-900 uppercase tracking-tighter leading-[0.85] drop-shadow-sm opacity-90 mb-4 whitespace-nowrap">
                 T-Ride
               </h1>
               <p className="text-slate-800 text-sm md:text-lg font-bold max-w-xl mx-auto mb-8 leading-relaxed break-keep">
