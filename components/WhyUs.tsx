@@ -3,10 +3,43 @@ import React from 'react';
 
 const WhyUs: React.FC = () => {
   const points = [
-    { title: "목적지 중심", desc: "가고 싶은 곳을 선택하면 이동 방법을 비교할 수 있어요." },
-    { title: "셔틀·프라이빗 통합", desc: "버스 셔틀과 전용 밴 서비스를 한곳에서 확인하세요." },
-    { title: "빠른 문의", desc: "문의 템플릿을 복사해 고객센터에 바로 전달할 수 있어요." },
-    { title: "파트너 운영사", desc: "검증된 운영사 파트너들의 상품을 안심하고 이용하세요." },
+    {
+      title: "목적지 중심",
+      desc: "가고 싶은 곳을 선택하면 이동 방법을 비교할 수 있어요.",
+      icon: (
+        <svg className="w-8 h-8 text-slate-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+        </svg>
+      )
+    },
+    {
+      title: "셔틀·프라이빗 통합",
+      desc: "버스 셔틀과 전용 밴 서비스를 한곳에서 확인하세요.",
+      icon: (
+        <svg className="w-8 h-8 text-slate-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
+        </svg>
+      )
+    },
+    {
+      title: "빠른 문의",
+      desc: "문의 템플릿을 복사해 고객센터에 바로 전달할 수 있어요.",
+      icon: (
+        <svg className="w-8 h-8 text-slate-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
+        </svg>
+      )
+    },
+    {
+      title: "파트너 운영사",
+      desc: "검증된 운영사 파트너들의 상품을 안심하고 이용하세요.",
+      icon: (
+        <svg className="w-8 h-8 text-slate-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+        </svg>
+      )
+    },
   ];
 
   return (
@@ -53,9 +86,7 @@ const WhyUs: React.FC = () => {
             {points.map((point, i) => (
               <div key={i} className="flex items-center p-6 bg-[#93A2B7] rounded-3xl hover:bg-[#8392A7] transition-all cursor-pointer group">
                 <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center shrink-0 shadow-sm mr-6">
-                  <svg className="w-8 h-8 text-slate-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d={i === 0 ? "M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" : i === 1 ? "M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" : "M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0z"} />
-                  </svg>
+                  {point.icon}
                 </div>
                 <div>
                   <h4 className="text-lg font-bold text-white mb-1">{point.title}</h4>
