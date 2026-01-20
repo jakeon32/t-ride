@@ -37,7 +37,7 @@ const MatchingLogic: React.FC = () => {
   ];
 
   return (
-    <section id="matching" className="py-20 md:pt-48 md:pb-24 bg-white">
+    <section id="matching" className="py-20 md:py-24 bg-white">
       <div className="max-w-7xl mx-auto px-6 md:px-8">
         <div className="text-center mb-12 md:mb-16 space-y-3 md:space-y-4">
           <div className="flex items-center justify-center mb-2">
@@ -54,8 +54,8 @@ const MatchingLogic: React.FC = () => {
 
         <div className="grid md:grid-cols-2 gap-6 md:gap-8 max-w-6xl mx-auto">
           {comparisonData.map((item, idx) => (
-            <div 
-              key={idx} 
+            <div
+              key={idx}
               className="bg-white p-8 md:p-12 rounded-3xl md:rounded-[2.5rem] border border-slate-100 card-shadow hover:border-blue-100 transition-all duration-300 group"
             >
               <div className="flex items-start gap-5 md:gap-6 mb-8 md:mb-10">
