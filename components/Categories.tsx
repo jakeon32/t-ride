@@ -15,13 +15,13 @@ const Categories: React.FC = () => {
     <section id="inventory" className="py-20 bg-slate-50">
       <div className="max-w-7xl mx-auto px-6 md:px-8">
 
-        <div className="flex justify-between items-end mb-10">
-          <div>
-            <h2 className="display-font text-3xl font-bold text-slate-900 mb-2">어디로 이동하시나요?</h2>
-          </div>
-          <p className="text-slate-500 text-sm max-w-sm text-right hidden md:block break-keep">
-            목적지에 가장 최적화된 모빌리티 인벤토리를 확인하세요.<br />
-            T-Ride가 준비한 6가지 핵심 카테고리입니다.
+        <div className="mb-10 text-left">
+          <span className="bg-[#f1f5f9] text-[#475569] text-[11px] md:text-[12px] font-bold px-3 py-1 rounded inline-block mb-3">
+            목적지 카테고리
+          </span>
+          <h2 className="display-font text-3xl font-bold text-slate-900 mb-2">어디로 이동하시나요?</h2>
+          <p className="text-slate-500 text-sm md:text-base font-medium">
+            목적지 유형을 선택하면 관련 상품을 확인할 수 있어요
           </p>
         </div>
 
