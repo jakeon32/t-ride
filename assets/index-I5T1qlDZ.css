@@ -1,1 +1,0 @@
-@tailwind base;@tailwind components;@tailwind utilities;@keyframes slideInRight{0%{opacity:0;transform:translate(80px)}to{opacity:1;transform:translate(0)}}.animate-slide-in-right{animation:slideInRight .8s ease-out forwards}
