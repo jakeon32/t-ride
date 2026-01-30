@@ -166,6 +166,11 @@ const ShoppingDetails: React.FC = () => {
 
                         {/* Slider Container */}
                         <div className="relative h-[600px] md:h-[500px] w-full rounded-[1.5rem] md:rounded-[2.5rem] overflow-hidden bg-slate-900">
+                            <div className="absolute top-4 left-4 md:top-6 md:left-6 z-30">
+                              <span className="bg-white/10 backdrop-blur-sm text-white/70 text-[10px] md:text-[11px] font-medium px-3 py-1.5 rounded-full border border-white/15">
+                                powered by <span className="font-bold">T-RiseUp</span>
+                              </span>
+                            </div>
                             {heroSlides.map((slide, index) => (
                                 <div
                                     key={slide.id}

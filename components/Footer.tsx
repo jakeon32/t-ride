@@ -46,6 +46,9 @@ const Footer: React.FC = () => {
           <p className="text-[#94a3b8] text-xs md:text-sm font-medium">
             &copy; 2026 T-Ride. All rights reserved.
           </p>
+          <p className="text-[#cbd5e1] text-[11px] md:text-xs font-medium">
+            Powered by <span className="font-bold">T-RiseUp</span>
+          </p>
         </div>
       </div>
     </footer>

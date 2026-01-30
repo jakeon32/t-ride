@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import heroBg from '../assets/hero-bg.png';
 
 const Hero: React.FC = () => {
@@ -13,7 +14,11 @@ const Hero: React.FC = () => {
             className="w-full h-full object-cover transform scale-105 group-hover:scale-100 transition-transform duration-1000 ease-out"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-black/15" />
-          <div className="absolute inset-0 bg-black/0" />
+          <div className="absolute top-4 left-4 md:top-6 md:left-6 z-20">
+            <span className="bg-white/10 backdrop-blur-sm text-white/70 text-[10px] md:text-[11px] font-medium px-3 py-1.5 rounded-full border border-white/15">
+              powered by <span className="font-bold">T-RiseUp</span>
+            </span>
+          </div>
 
           <div className="absolute inset-0 flex flex-col justify-center items-center text-center p-6 md:p-12 z-10">
             <div className="max-w-4xl mx-auto text-left md:text-center">
@@ -28,9 +33,9 @@ const Hero: React.FC = () => {
                 <a href="#inventory" className="bg-black text-white px-8 md:px-10 py-4 rounded-[14px] text-base font-bold tracking-tight hover:bg-slate-900 transition-all shadow-lg border border-gray-600/50 text-center">
                   카테고리 둘러보기
                 </a>
-                <button className="bg-white/10 backdrop-blur-sm border border-white/20 text-white px-8 md:px-10 py-4 rounded-[14px] text-base font-bold tracking-tight hover:bg-white/20 transition-all shadow-sm">
+                <Link to="/support" className="bg-white/10 backdrop-blur-sm border border-white/20 text-white px-8 md:px-10 py-4 rounded-[14px] text-base font-bold tracking-tight hover:bg-white/20 transition-all shadow-sm text-center">
                   고객센터
-                </button>
+                </Link>
               </div>
             </div>
           </div>

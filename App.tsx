@@ -10,6 +10,7 @@ import ShoppingDetails from './components/ShoppingDetails';
 import ThemeParkDetails from './components/ThemeParkDetails';
 import EventDetails from './components/EventDetails';
 import LocalTripDetails from './components/LocalTripDetails';
+import Support from './components/Support';
 
 const App: React.FC = () => {
   return (
@@ -24,6 +25,7 @@ const App: React.FC = () => {
         <Route path="/theme-park" element={<ThemeParkDetails />} />
         <Route path="/event" element={<EventDetails />} />
         <Route path="/local-trip" element={<LocalTripDetails />} />
+        <Route path="/support" element={<Support />} />
       </Routes>
     </Router>
   );

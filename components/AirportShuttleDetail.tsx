@@ -23,6 +23,11 @@ const AirportShuttleDetail: React.FC = () => {
             <div className="relative h-[280px] md:h-[340px] w-full rounded-[1.5rem] md:rounded-[2.5rem] overflow-hidden">
               <img src={shuttleImg} alt="공항 셔틀" className="w-full h-full object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-black/10" />
+              <div className="absolute top-4 left-4 md:top-6 md:left-6 z-20">
+                <span className="bg-white/10 backdrop-blur-sm text-white/70 text-[10px] md:text-[11px] font-medium px-3 py-1.5 rounded-full border border-white/15">
+                  powered by <span className="font-bold">T-RiseUp</span>
+                </span>
+              </div>
               <div className="absolute inset-0 flex flex-col justify-end p-6 md:p-12 z-10">
                 {/* Breadcrumb */}
                 <nav className="text-white/70 text-xs md:text-sm mb-4 font-medium">

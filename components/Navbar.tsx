@@ -72,9 +72,9 @@ const Navbar: React.FC = () => {
         {/* Right Side Actions */}
         <div className="flex items-center space-x-2 md:space-x-3">
           {/* Customer Service */}
-          <a href="#contact" className="hidden md:block text-[12px] font-medium text-slate-600 hover:text-black transition-colors">
+          <Link to="/support" className="hidden md:block text-[12px] font-medium text-slate-600 hover:text-black transition-colors">
             고객센터
-          </a>
+          </Link>
 
           {/* Language Dropdown */}
           <div className="relative" ref={langRef}>
@@ -160,9 +160,9 @@ const Navbar: React.FC = () => {
               }
             })}
             <div className="pt-3 border-t border-slate-100 mt-3 space-y-2">
-              <a href="#contact" className="block px-4 py-3 text-sm font-medium text-slate-600 hover:bg-slate-50 hover:text-black rounded-xl transition-colors" onClick={() => setIsMenuOpen(false)}>
+              <Link to="/support" className="block px-4 py-3 text-sm font-medium text-slate-600 hover:bg-slate-50 hover:text-black rounded-xl transition-colors" onClick={() => setIsMenuOpen(false)}>
                 고객센터
-              </a>
+              </Link>
               <button className="w-full text-sm font-bold text-white bg-[#0f172a] px-6 py-3 rounded-xl hover:bg-slate-800 transition-all">
                 로그인
               </button>
