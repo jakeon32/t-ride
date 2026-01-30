@@ -1,4 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react';
+import { Link } from 'react-router-dom';
 import Navbar from './Navbar';
 import Footer from './Footer';
 import shuttleImg from '../assets/shuttle_airport.jpg';
@@ -16,6 +17,7 @@ interface Destination {
     description: string;
     features: string[];
     image: string;
+    href?: string;
 }
 
 const AirportDetails: React.FC = () => {
@@ -76,7 +78,8 @@ const AirportDetails: React.FC = () => {
             title: '인천공항 ↔ 서울 셔틀',
             description: '노선·정류장 기반 · 시간표 운행',
             features: ['시간표 기반', '주요 정류장 경유'],
-            image: icnImg
+            image: icnImg,
+            href: '/airport/icn-seoul-shuttle'
         },
         {
             id: 2,
@@ -85,7 +88,8 @@ const AirportDetails: React.FC = () => {
             title: '인천공항 프라이빗 밴(전용)',
             description: '원하는 시간·동선 · 우리끼리 단독 이동',
             features: ['단독 이동', '짐/유아 동반 편리'],
-            image: icnImg
+            image: icnImg,
+            href: '/airport/icn-gangnam-private'
         },
         {
             id: 3,
@@ -286,9 +290,9 @@ const AirportDetails: React.FC = () => {
                             {filteredDestinations.map((item) => (
                                 <div
                                     key={item.id}
-                                    className="flex-shrink-0 snap-start 
-                               w-[calc((100%-20px)/1.5)] 
-                               md:w-[calc((100%-40px)/3)] 
+                                    className="flex-shrink-0 snap-start
+                               w-[calc((100%-20px)/1.5)]
+                               md:w-[calc((100%-40px)/3)]
                                bg-white rounded-2xl border border-slate-200 overflow-hidden hover:shadow-lg transition-shadow"
                                 >
                                     <div className="aspect-[4/3] bg-slate-100 relative overflow-hidden">
@@ -306,13 +310,18 @@ const AirportDetails: React.FC = () => {
                                         <h3 className="text-lg font-bold text-[#1e293b] mb-1 line-clamp-1">{item.title}</h3>
                                         <p className="text-sm text-slate-500 mb-4 line-clamp-1">{item.description}</p>
 
-                                        <div className="flex flex-wrap gap-2 mb-0">
+                                        <div className="flex flex-wrap gap-2 mb-4">
                                             {item.features.slice(0, 2).map((feature, idx) => (
                                                 <span key={idx} className="inline-flex items-center px-2 py-1 rounded bg-slate-50 text-xs text-slate-500">
                                                     {feature}
                                                 </span>
                                             ))}
                                         </div>
+                                        {item.href && (
+                                            <Link to={item.href} className="block w-full py-2.5 text-center rounded-lg border border-slate-200 text-sm font-bold text-slate-600 hover:bg-slate-50 transition-colors">
+                                                자세히 보기
+                                            </Link>
+                                        )}
                                     </div>
                                 </div>
                             ))}
